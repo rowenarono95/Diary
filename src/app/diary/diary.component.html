@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <app-create-diary></app-create-diary>
+    <div class="card card-cascade wider reverse mt-5" *ngFor=" let diary of diaries">
+      <div class="card-body card-body-cascade text-center">
+        {{diary.title}}
+        <hr>
+        <div class="row">
+          <div class="col-8">
+            {{diary.description}}
+          </div>
+          <div class="col-4">
+            {{diary.date|date|uppercase}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
